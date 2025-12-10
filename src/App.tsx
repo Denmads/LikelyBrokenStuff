@@ -28,8 +28,25 @@ function App() {
       icon: '✓',
       link: '/tools/todo',
       color: '#4ECDC4'
+    },
+    {
+      id: 'password-generator',
+      title: 'Bad Password Generator',
+      description: 'Generate hilariously terrible passwords.',
+      icon: '🔐',
+      link: '/tools/password',
+      color: '#FF6B6B'
+    },
+    {
+      id: 'color-picker',
+      title: 'Color Picker',
+      description: 'Pick a color or enter a hex value; get a ridiculous name for it.',
+      icon: '🎨',
+      link: '/tools/color',
+      color: '#9370DB'
     }
   ]
+
 
   return (
     <div className="app">
@@ -110,23 +127,24 @@ function App() {
         <div className="about-content">
           <h2 className="section-title">About likelyBroken</h2>
           <p>
-            Welcome to the chaos! likelyBroken is your go-to destination for tools that *probably* work, 
-            or at least entertain you while you debug. We specialize in questionable solutions, hilarious 
-            edge cases, and the occasional "wait, how did that actually work?" moments. Our mission is to 
-            make developer life more fun, one broken tool at a time.
+            Welcome to the chaos! likelyBroken is a collection of intentionally broken, hilariously bad, 
+            and questionable developer tools. We believe that sometimes the best way to learn is through 
+            the most chaotic tools imaginable. From randomized task lists to terrible password generators, 
+            we've got everything you need to embrace the broken.
           </p>
           <p>
-            Whether you're tracking down elusive bugs, generating boilerplate, testing APIs, or 
-            visualizing data, likelyBroken has got your back.
+            Our mission is simple: make developer life more entertaining, one ridiculous tool at a time. 
+            Whether you're procrastinating on actual work or just want a good laugh, likelyBroken has something 
+            hilariously useless for you.
           </p>
           <div className="stats">
             <div className="stat">
-              <div className="stat-number">6+</div>
+              <div className="stat-number">2+</div>
               <div className="stat-label">Tools</div>
             </div>
             <div className="stat">
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Free & Open</div>
+              <div className="stat-number">∞</div>
+              <div className="stat-label">Bad Ideas</div>
             </div>
             <div className="stat">
               <div className="stat-number">24/7</div>
@@ -141,8 +159,6 @@ function App() {
         <p>&copy; 2025 likelyBroken. Built with chaos and ❤️</p>
         <div className="footer-links">
           <a href="https://github.com/denmads/likelybroken" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="mailto:hello@likelybroken.dev">Contact</a>
-          <a href="#privacy">Privacy</a>
         </div>
       </footer>
     </div>
