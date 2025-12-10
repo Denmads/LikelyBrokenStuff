@@ -110,7 +110,7 @@ function App() {
           <div className="glitch" data-text="likelyBroken">
             <h1>likelyBroken</h1>
           </div>
-          <p className="tagline">A collection of tools that are probably broken (but in a fun way)</p>
+          <p className="tagline">A collection of tools that are probably broken</p>
           <p className="subtitle">Where developers embrace chaos and make things work anyway</p>
           <button className="cta-button" onClick={() => document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' })}>
             Explore Broken Tools
