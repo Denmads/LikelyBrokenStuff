@@ -59,6 +59,15 @@ html {
   background-clip: text;
 }
 
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  flex-shrink: 0;
+}
+
 .logo-emoji {
   font-size: 1.8rem;
   animation: spin 3s linear infinite;
@@ -434,6 +443,11 @@ html {
 
   .tools-grid {
     grid-template-columns: 1fr;
+  }
+
+  .logo-img {
+    width: 28px;
+    height: 28px;
   }
 
   .stats {

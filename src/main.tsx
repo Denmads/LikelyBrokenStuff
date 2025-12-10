@@ -6,6 +6,7 @@ import App from './App.tsx'
 import TodoListPage from './pages/TodoListPage.tsx'
 import PasswordGeneratorPage from './pages/PasswordGeneratorPage.tsx'
 import ColorPickerPage from './pages/ColorPickerPage.tsx'
+import DefinitelySyncingPage from './pages/DefinitelySyncingPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/tools/todo" element={<TodoListPage />} />
         <Route path="/tools/password" element={<PasswordGeneratorPage />} />
         <Route path="/tools/color" element={<ColorPickerPage />} />
+        <Route path="/tools/sync" element={<DefinitelySyncingPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

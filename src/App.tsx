@@ -38,6 +38,14 @@ function App() {
       color: '#FF6B6B'
     },
     {
+      id: 'definitely-syncing',
+      title: 'Definitely Syncing',
+      description: 'Syncs… something. Press to definitely sync it.',
+      icon: '🔁',
+      link: '/tools/sync',
+      color: '#FFD166'
+    },
+    {
       id: 'color-picker',
       title: 'Color Picker',
       description: 'Pick a color or enter a hex value; get a ridiculous name for it.',
@@ -55,6 +63,7 @@ function App() {
         <div className="nav-container">
           <div className="nav-logo">
             <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <img src="/favicon.svg" alt="likelyBroken logo" className="logo-img" />
               <span className="logo-text">likelyBroken</span>
               <span className="logo-emoji">⚙️</span>
             </a>
@@ -139,7 +148,7 @@ function App() {
           </p>
           <div className="stats">
             <div className="stat">
-              <div className="stat-number">2+</div>
+              <div className="stat-number">4+</div>
               <div className="stat-label">Tools</div>
             </div>
             <div className="stat">

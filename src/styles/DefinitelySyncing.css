@@ -1,0 +1,82 @@
+.defsync-container {
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.defsync-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.defsync-card h1 {
+  margin-bottom: 0.5rem;
+}
+
+.defsync-sub {
+  color: var(--color-gray);
+  margin-bottom: 1.25rem;
+}
+
+.defsync-action {
+  margin: 1rem 0;
+}
+
+.sync-button {
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #FFD166 0%, #FF6B6B 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-dark);
+}
+
+.sync-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(0,0,0,0.1);
+  border-top-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.defsync-status {
+  margin-top: 1rem;
+  min-height: 1.25rem;
+}
+
+.status-text {
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+.last-sync {
+  margin-top: 0.5rem;
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+.last-sync-time {
+  color: var(--color-light);
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
