@@ -22,68 +22,12 @@ function App() {
 
   const tools: Tool[] = [
     {
-      id: 'coffee-timer',
-      title: 'Coffee Timer',
-      description: '*Probably* counts down correctly. Maybe.',
-      icon: '☕',
-      link: '/tools/coffee',
-      color: '#8B4513'
-    },
-    {
-      id: 'rubber-duck',
-      title: 'Rubber Duck Debugger',
-      description: 'Quack at your code until it works (rarely works)',
-      icon: '🦆',
-      link: '/tools/duck',
-      color: '#FFD700'
-    },
-    {
-      id: 'random-advice',
-      title: 'Random Dev Advice',
-      description: 'Get questionable wisdom from the void',
-      icon: '🎱',
-      link: '/tools/advice',
-      color: '#9370DB'
-    },
-    {
-      id: 'bug-tracker',
-      title: 'Bug Tracker',
-      description: 'Track bugs that may or may not exist',
-      icon: '🐛',
-      link: '/tools/bugs',
-      color: '#FF6B6B'
-    },
-    {
-      id: 'code-roulette',
-      title: 'Code Roulette',
-      description: 'Let fate decide your code formatting',
-      icon: '🎲',
-      link: '/tools/roulette',
-      color: '#FF1493'
-    },
-    {
-      id: 'ai-helper',
-      title: 'AI Code Helper',
-      description: 'Sometimes helpful, often creative with solutions',
-      icon: '🤖',
-      link: '/tools/ai',
-      color: '#00CED1'
-    },
-    {
-      id: 'dependency-hell',
-      title: 'Dependency Hell Navigator',
-      description: 'Find your way through npm install chaos',
-      icon: '👹',
-      link: '/tools/deps',
-      color: '#FF4500'
-    },
-    {
-      id: 'time-travel',
-      title: 'Git Time Machine',
-      description: 'Go back in git history (your problems follow)',
-      icon: '⏰',
-      link: '/tools/git',
-      color: '#20B2AA'
+      id: 'todo-list',
+      title: 'Todo List',
+      description: 'A basic todo list stored locally.',
+      icon: '✓',
+      link: '/tools/todo',
+      color: '#4ECDC4'
     }
   ]
 
@@ -93,13 +37,14 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <span className="logo-text">likelyBroken</span>
-            <span className="logo-emoji">⚙️</span>
+            <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span className="logo-text">likelyBroken</span>
+              <span className="logo-emoji">⚙️</span>
+            </a>
           </div>
           <div className="nav-links">
             <a href="#tools">Tools</a>
             <a href="#about">About</a>
-            <a href="#contact">Contact</a>
           </div>
         </div>
       </nav>
@@ -152,6 +97,11 @@ function App() {
               </a>
             </div>
           ))}
+          <div className="tool-card coming-soon">
+            <div className="tool-icon">🚀</div>
+            <h3>More Tools Coming...</h3>
+            <p>We're cooking up more broken tools for you. Stay tuned!</p>
+          </div>
         </div>
       </section>
 
