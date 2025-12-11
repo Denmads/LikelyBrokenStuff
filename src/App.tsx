@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
 
 interface Tool {
@@ -13,6 +14,7 @@ interface Tool {
 function App() {
   const [scrollY, setScrollY] = useState(0)
   const [hoveredTool, setHoveredTool] = useState<string | null>(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -69,8 +71,26 @@ function App() {
             </a>
           </div>
           <div className="nav-links">
-            <a href="#tools">Tools</a>
-            <a href="#about">About</a>
+            <a
+              href="#/"
+              onClick={(e) => {
+                e.preventDefault()
+                navigate('/')
+                setTimeout(() => document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' }), 60)
+              }}
+            >
+              Tools
+            </a>
+            <a
+              href="#/"
+              onClick={(e) => {
+                e.preventDefault()
+                navigate('/')
+                setTimeout(() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }), 60)
+              }}
+            >
+              About
+            </a>
           </div>
         </div>
       </nav>
