@@ -26,7 +26,7 @@ function App() {
       title: 'Todo List',
       description: 'A basic todo list stored locally.',
       icon: '✓',
-      link: '/tools/todo',
+      link: '#/tools/todo',
       color: '#4ECDC4'
     },
     {
@@ -34,7 +34,7 @@ function App() {
       title: 'Bad Password Generator',
       description: 'Generate hilariously terrible passwords.',
       icon: '🔐',
-      link: '/tools/password',
+      link: '#/tools/password',
       color: '#FF6B6B'
     },
     {
@@ -42,7 +42,7 @@ function App() {
       title: 'Definitely Syncing',
       description: 'Syncs… something. Press to definitely sync it.',
       icon: '🔁',
-      link: '/tools/sync',
+      link: '#/tools/sync',
       color: '#FFD166'
     },
     {
@@ -50,7 +50,7 @@ function App() {
       title: 'Color Picker',
       description: 'Pick a color or enter a hex value; get a ridiculous name for it.',
       icon: '🎨',
-      link: '/tools/color',
+      link: '#/tools/color',
       color: '#9370DB'
     }
   ]

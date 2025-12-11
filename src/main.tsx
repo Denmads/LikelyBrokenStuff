@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import TodoListPage from './pages/TodoListPage.tsx'
@@ -10,7 +10,7 @@ import DefinitelySyncingPage from './pages/DefinitelySyncingPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/tools/todo" element={<TodoListPage />} />
@@ -18,6 +18,6 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/tools/color" element={<ColorPickerPage />} />
         <Route path="/tools/sync" element={<DefinitelySyncingPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
