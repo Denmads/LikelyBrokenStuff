@@ -1,0 +1,116 @@
+.glitch-gobbler {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(20,20,30,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.game-header {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.game-header .left { display:flex; align-items:center; gap:0.8rem }
+.game-header .right { display:flex; align-items:center; gap:0.6rem }
+.combo { background: rgba(255,255,255,0.03); padding:0.2rem 0.6rem; border-radius:6px; font-weight:800 }
+.double { color: #ffd166; font-weight:700; padding:0.2rem 0.4rem }
+.help { background: transparent; border: 1px solid rgba(255,255,255,0.06); border-radius:6px; padding:0.2rem 0.4rem; cursor:pointer }
+
+.game-controls {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.game-board {
+  height: 420px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1));
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-board.inverted { transform: scaleX(-1); }
+
+.bug {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.bug-normal {
+  background: linear-gradient(135deg, #95E1D3, #4ECDC4);
+  color: #072A2B;
+  box-shadow: 0 4px 12px rgba(78,205,196,0.12);
+}
+
+.bug-power { background: linear-gradient(135deg, #A8FF9B, #4EF58D); color: #072A2B; box-shadow: 0 6px 20px rgba(78,205,196,0.12); }
+.bug-bomb { background: linear-gradient(135deg, #FF8F8F, #FF3F3F); color: #2b0a0a; box-shadow: 0 6px 30px rgba(255,107,107,0.25); transform: rotate(-4deg) scale(1.02) }
+
+.bug-broken {
+  background: linear-gradient(135deg, #FF6B6B, #FFD166);
+  color: #2b0a0a;
+  box-shadow: 0 6px 20px rgba(255,107,107,0.15);
+  transform: rotate(-6deg);
+}
+
+.bug:active { transform: scale(0.92); }
+.bug-hp { font-size: 0.9rem }
+
+.game-over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-weight: 900;
+  font-size: 1.4rem;
+  border-radius: 8px;
+}
+
+.start, .stop, .reset {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #4ECDC4, #95E1D3);
+  color: #041313;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stop { background: linear-gradient(135deg, #FF6B6B, #FF8787); color: white }
+.reset { background: rgba(255,255,255,0.03); color: var(--color-light) }
+
+.game-footer { margin-top: 0.5rem; color: var(--color-gray); font-size: 0.9rem }
+
+.glitch-tutorial {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+.glitch-tutorial-inner { background: rgba(10,10,20,0.95); border: 1px solid rgba(255,255,255,0.05); padding:1.4rem; border-radius:12px; width:min(680px, 92%); color:var(--color-light) }
+.glitch-tutorial-inner h3 { margin-bottom: 0.6rem }
+.glitch-tutorial-inner ul { margin-left: 1rem; margin-bottom: 1rem }
+.tutorial-actions { display:flex; gap:0.6rem; justify-content:flex-end }
+.tutorial-actions button { padding:0.5rem 0.8rem; border-radius:8px; border:none; cursor:pointer }
+.tutorial-actions button:first-child { background: rgba(255,255,255,0.03); color:var(--color-light) }
+.tutorial-actions button:last-child { background: linear-gradient(135deg,#4ECDC4,#95E1D3); color:#041313; }

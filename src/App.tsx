@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import './App.css'
+import Navbar from './components/Navbar'
 
 interface Tool {
   id: string
@@ -14,7 +14,6 @@ interface Tool {
 function App() {
   const [scrollY, setScrollY] = useState(0)
   const [hoveredTool, setHoveredTool] = useState<string | null>(null)
-  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -55,45 +54,22 @@ function App() {
       link: '#/tools/color',
       color: '#9370DB'
     }
+    ,
+    {
+      id: 'glitch-gobbler',
+      title: 'Glitch Gobbler',
+      description: 'A fast and frantic click game where broken glitches misbehave.',
+      icon: '👾',
+      link: '#/tools/game',
+      color: '#FF9F1C'
+    }
   ]
 
 
   return (
     <div className="app">
       {/* Navigation */}
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className="nav-logo">
-            <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <img src="/favicon.svg" alt="likelyBroken logo" className="logo-img" />
-              <span className="logo-text">likelyBroken</span>
-              <span className="logo-emoji">⚙️</span>
-            </a>
-          </div>
-          <div className="nav-links">
-            <a
-              href="#/"
-              onClick={(e) => {
-                e.preventDefault()
-                navigate('/')
-                setTimeout(() => document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' }), 60)
-              }}
-            >
-              Tools
-            </a>
-            <a
-              href="#/"
-              onClick={(e) => {
-                e.preventDefault()
-                navigate('/')
-                setTimeout(() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }), 60)
-              }}
-            >
-              About
-            </a>
-          </div>
-        </div>
-      </nav>
+        <Navbar />
 
       {/* Hero Section */}
       <section className="hero">
